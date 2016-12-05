@@ -1,0 +1,31 @@
+<%= form_for @user do |f| %>
+ 
+  <p>
+    <%= f.label :first_name, "First Name" %>
+    <%= f.text_field :first_name %>
+    <%= @user.errors.messages[:first_name].first%>
+  </p>
+ 
+  <p>
+    <%= f.label :last_name, "Last Name" %>
+    <%= f.text_field :last_name %>
+    <%= @user.errors.messages[:last_name].first%>
+  </p>
+  
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= @user.errors.messages[:email].first%>
+  </p>
+
+  <p>
+    <%= f.label :years_of_education, "Years of Education" %>
+    <%= f.text_field :years_of_education %>
+    <%= @user.errors.messages[:years_of_education].first%>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
